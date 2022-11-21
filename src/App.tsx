@@ -1,5 +1,6 @@
 import * as C from "./App.styles";
 import logoImage from "./assets/devmemory_logo.png";
+import { InfoItem } from "./components/InfoItem";
 
 const App = () => {
   return (
@@ -8,10 +9,13 @@ const App = () => {
         <C.LogoLink>
           <img src={logoImage} width="200" alt="" />
         </C.LogoLink>
-        <C.InfoArea>mexer deipois</C.InfoArea>
+        <C.InfoArea>
+          <InfoItem label="Tempo" value="00:00" />
+          <InfoItem label="Movimento" value="0" />
+        </C.InfoArea>
         <button>Reiniciar</button>
-        <C.GridArea></C.GridArea>
       </C.Info>
+      <C.GridArea>Teste</C.GridArea>
     </C.Container>
   );
 };
